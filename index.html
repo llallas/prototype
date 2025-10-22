@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CampusCars • Prototype</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap row">
+        <h1 class="brand">CampusCars <span class="badge">prototype</span></h1>
+        <div class="right toolbar" id="authArea"></div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div class="panel">
+          <div class="label">Search</div>
+          <div class="filters">
+            <input id="q" placeholder="Search make/model (e.g., Honda Civic)" />
+            <input id="minPrice" type="number" placeholder="Min $" />
+            <input id="maxPrice" type="number" placeholder="Max $" />
+          </div>
+          <div class="toolbar mtop">
+            <button class="btn ghost" id="clearFilters">Clear</button>
+            <button class="btn solid" id="applyFilters">Search</button>
+          </div>
+        </div>
+
+        <div class="panel" id="createPanel">
+          <div class="label">Create Listing (sign‑in required)</div>
+          <div class="inputs">
+            <input id="title" placeholder="Title (e.g., 2012 Honda Civic LX)" />
+            <input id="price" type="number" placeholder="Price ($)" />
+            <input id="make" placeholder="Make" />
+            <input id="model" placeholder="Model" />
+            <input id="year" type="number" placeholder="Year" />
+            <input id="mileage" type="number" placeholder="Mileage" />
+            <select id="condition">
+              <option value="">Condition</option>
+              <option>Excellent</option>
+              <option>Good</option>
+              <option>Fair</option>
+              <option>Needs Work</option>
+            </select>
+            <input
+              id="location"
+              placeholder="Location (e.g., near Campus Center)" />
+            <input id="photo" type="file" accept="image/*" />
+            <textarea
+              id="description"
+              placeholder="Short description (new brakes, clean title, etc.)"></textarea>
+          </div>
+          <div class="toolbar mtop">
+            <button class="btn solid" id="postBtn">Post Listing</button>
+            <button class="btn ghost hide" id="cancelEditBtn">
+              Cancel Edit
+            </button>
+            <span class="muted" id="postHint"></span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row between m8">
+          <h2 class="h2">Listings</h2>
+          <span class="muted" id="count"></span>
+        </div>
+        <div id="grid" class="grid"></div>
+      </section>
+
+      <footer class="wrap footer">
+        <div class="muted">Meet in safe, public campus locations.</div>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
